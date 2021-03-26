@@ -1,0 +1,38 @@
+name: Update Names
+on:
+  schedule:
+    - cron:  '0 10 * * *'
+jobs:
+  updateSwagger:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Get Latest Letter SHA
+        id: letter
+        run: |
+          echo ::set-output name=sha::$(curl -sL https://api.github.com/repos/rms-support-letter/rms-support-letter.github.io/branches/master | jq -r ".commit.sha")
+          echo ::set-output name=current_sha::$(<letter.sha)
+      - name: Update Names List
+        if: steps.letter.outputs.current_sha != steps.letter.outputs.sha
+        run: |
+          # Delete the dist directory and index.html
+          rm -fr dist index.html
+          # Download the release
+          curl -sL -o $RELEASE_TAG https://api.github.com/repos/swagger-api/swagger-ui/tarball/$RELEASE_TAG
+          # Extract the dist directory
+          tar -xzf $RELEASE_TAG --strip-components=1 $(tar -tzf $RELEASE_TAG | head -1 | cut -f1 -d"/")/dist
+          rm $RELEASE_TAG
+          # Move index.html to the root
+          mv dist/index.html .
+          # Fix references in index.html
+          sed -i "s|https://petstore.swagger.io/v2/swagger.json|$SWAGGER_YAML|g" index.html
+          sed -i "s|href=\"./|href=\"dist/|g" index.html
+          sed -i "s|src=\"./|src=\"dist/|g" index.html
+          # Update current release
+          echo ${{ steps.letter.outputs.current_sha }} > letter.sha
+      - name: Commit and Push
+        run: |
+          git config --global user.name 'Your Name'
+          git config --global user.email 'your-email@users.noreply.github.com'
+          git commit -am "New release version"
+          git push
