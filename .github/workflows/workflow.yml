@@ -30,8 +30,7 @@ jobs:
           # Extract the /_data/signed directory
           tar -xzf $COMMIT_SHA --strip-components=1 $(tar -tzf $COMMIT_SHA | head -1 | cut -f1 -d"/")/_data/signed
           # Convert all the YAML files to one big JSON file
-          npm install -g yamljs
-          yaml2json _data/signed --save
+          npx yaml2json _data/signed --save
           find _data/signed -name '*.json' -exec cat '{}' + | jq -s '.' > names.json
           # Clean up
           rm $COMMIT_SHA
