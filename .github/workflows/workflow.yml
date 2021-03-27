@@ -37,7 +37,7 @@ jobs:
           rm -fr names.json
           # Convert all the YAML files to one big JSON file
 
-          npx yamljs _data/signed/ --save
+          npx --package yamljs yaml2json _data/signed/ --save
           find _data/signed -name '*.json' -exec cat '{}' + | jq -s '.' > names.json
       - name: Clean Up
         env:
