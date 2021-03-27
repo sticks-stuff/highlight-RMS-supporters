@@ -24,6 +24,7 @@ jobs:
           COMMIT_SHA: ${{ steps.letter.outputs.sha }}
         run: |
           wget https://api.github.com/repos/rms-support-letter/rms-support-letter.github.io/tarball -O $COMMIT_SHA
+          ls
       - name: Extract letter signers
         env:
           COMMIT_SHA: ${{ steps.letter.outputs.sha }}
