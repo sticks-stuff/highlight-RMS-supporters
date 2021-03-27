@@ -29,7 +29,7 @@ jobs:
         env:
           COMMIT_SHA: ${{ steps.letter.outputs.sha }}
         run: |
-          tar -v -xzf $COMMIT_SHA --strip-components=1 $(tar -tzf -v $COMMIT_SHA | head -1 | cut -f1 -d"/")/_data/signed
+          tar -v -xzf $COMMIT_SHA --strip-components=1 $(tar -tzf $COMMIT_SHA | head -1 | cut -f1 -d"/")/_data/signed
       - name: Update Names List
         run: |
           # Remove the original JSON
