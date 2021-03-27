@@ -7,7 +7,7 @@ on:
       name:
         description: 'Person to greet'
         default: 'Mona the Octocat'
-        
+
 jobs:
   updateNames:
     runs-on: ubuntu-latest
@@ -17,7 +17,7 @@ jobs:
         id: letter
         run: |
           echo ::set-output name=sha::$(curl -sL https://api.github.com/repos/rms-support-letter/rms-support-letter.github.io/branches/master | jq -r ".commit.sha")
-          echo ::set-output name=current_sha::$(<letter.sha)
+          echo ::set-output name=current_sha::$(<lettersha.version)
       - name: Update Names List
         if: steps.letter.outputs.current_sha != steps.letter.outputs.sha
         env:
@@ -36,6 +36,8 @@ jobs:
           # Clean up
           rm $COMMIT_SHA
           rm -r $COMMIT_SHA
+          # Update current SHA version
+          echo ${{ steps.letter.outputs.sha }} > lettersha.version
       - name: Commit and Push
         run: |
           git config --global user.name 'RMS Supporter Bot'
