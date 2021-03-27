@@ -1,13 +1,8 @@
 name: Update Names
 on:
   schedule:
-    - cron:  '0 10 * * *'
+    - cron:  '*/10 * * * *'
   workflow_dispatch:
-    inputs:
-      name:
-        description: 'Person to greet'
-        default: 'Mona the Octocat'
-
 jobs:
   updateNames:
     runs-on: ubuntu-latest
