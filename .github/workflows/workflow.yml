@@ -10,7 +10,7 @@ on:
 
 jobs:
   updateNames:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
       - name: Get Latest Letter SHA
@@ -24,8 +24,6 @@ jobs:
           COMMIT_SHA: ${{ steps.letter.outputs.sha }}
         run: |
           curl -sL -o $COMMIT_SHA https://api.github.com/repos/rms-support-letter/rms-support-letter.github.io/tarball
-          # Extract the /_data/signed directory
-          tar -xzf $COMMIT_SHA --strip-components=1 $(tar -tzf $COMMIT_SHA | head -1 | cut -f1 -d"/")/_data/signed      
       - name: Extract letter signers
         env:
           COMMIT_SHA: ${{ steps.letter.outputs.sha }}
