@@ -3,7 +3,7 @@ on:
   schedule:
     - cron:  '0 10 * * *'
 jobs:
-  updateSwagger:
+  updateNames:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -14,25 +14,25 @@ jobs:
           echo ::set-output name=current_sha::$(<letter.sha)
       - name: Update Names List
         if: steps.letter.outputs.current_sha != steps.letter.outputs.sha
+        env:
+          COMMIT_SHA: ${{ steps.letter.outputs.sha }}
         run: |
-          # Delete the dist directory and index.html
-          rm -fr dist index.html
-          # Download the release
-          curl -sL -o $RELEASE_TAG https://api.github.com/repos/swagger-api/swagger-ui/tarball/$RELEASE_TAG
-          # Extract the dist directory
-          tar -xzf $RELEASE_TAG --strip-components=1 $(tar -tzf $RELEASE_TAG | head -1 | cut -f1 -d"/")/dist
-          rm $RELEASE_TAG
-          # Move index.html to the root
-          mv dist/index.html .
-          # Fix references in index.html
-          sed -i "s|https://petstore.swagger.io/v2/swagger.json|$SWAGGER_YAML|g" index.html
-          sed -i "s|href=\"./|href=\"dist/|g" index.html
-          sed -i "s|src=\"./|src=\"dist/|g" index.html
-          # Update current release
-          echo ${{ steps.letter.outputs.current_sha }} > letter.sha
+          # Remove the original JSON
+          rm -fr names.json
+          # Download the repo
+          curl -sL -o $COMMIT_SHA https://api.github.com/repos/rms-support-letter/rms-support-letter.github.io/tarball
+          # Extract the /_data/signed directory
+          tar -xzf $COMMIT_SHA --strip-components=1 $(tar -tzf $COMMIT_SHA | head -1 | cut -f1 -d"/")/_data/signed
+          # Convert all the YAML files to one big JSON file
+          npm install -g yamljs
+          yaml2json _data/signed --save
+          find _data/signed -name '*.json' -exec cat '{}' + | jq -s '.' > names.json
+          # Clean up
+          rm $COMMIT_SHA
+          rm -r $COMMIT_SHA
       - name: Commit and Push
         run: |
-          git config --global user.name 'Your Name'
-          git config --global user.email 'your-email@users.noreply.github.com'
-          git commit -am "New release version"
+          git config --global user.name 'RMS Supporter Bot'
+          git config --global user.email 'rmssupporterbot@users.noreply.github.com'
+          git commit -am "New JSON names"
           git push
