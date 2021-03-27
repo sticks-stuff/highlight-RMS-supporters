@@ -44,7 +44,7 @@ jobs:
           COMMIT_SHA: ${{ steps.letter.outputs.sha }}
         run: |
           rm $COMMIT_SHA
-          rm -r $COMMIT_SHA
+          rm -r _data/signed
           # Update current SHA version
           echo ${{ steps.letter.outputs.sha }} > lettersha.version
       - name: Commit and Push
