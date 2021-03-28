@@ -3800,10 +3800,6 @@
     "link": "https://shii.moe/"
   },
   {
-    "name": "Jacob \"Kreyren\" Hrbek",
-    "link": "http://wiki.fsfe.org/Supporters/kreyren"
-  },
-  {
     "name": "Michael Reim",
     "link": "https://eerielinux.wordpress.com"
   },
@@ -5520,6 +5516,10 @@
     "link": "mailto:matsaa93@gmail.com"
   },
   {
+    "name": "Jacob \"Kreyren\" Hrbek (Former FSF member and current FSFE supporter)",
+    "link": "http://wiki.fsfe.org/Supporters/kreyren"
+  },
+  {
     "name": "Maxim",
     "link": "https://github.com/Maxim-Zhukov"
   },
@@ -6526,6 +6526,10 @@
   {
     "name": "ks1322",
     "link": "https://github.com/ks1322"
+  },
+  {
+    "name": "Luis Bedoya",
+    "link": "https://github.com/luisbedoya13"
   },
   {
     "name": "Papa Ere",
@@ -10394,6 +10398,10 @@
   {
     "name": "cryofrost",
     "link": "https://github.com/cryofrost"
+  },
+  {
+    "name": "Steve Stuff",
+    "link": "https://github.com/Otus9051"
   },
   {
     "name": "Artem Siryk",
