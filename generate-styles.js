@@ -25,4 +25,4 @@ names.forEach(function (item) {
 });
 
 console.log(output.slice(0, -2));
-console.log("\{background-color: Crimson;\}");
+console.log("\{ padding: 5px; background-color: Crimson; color: black; \}");
