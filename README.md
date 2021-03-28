@@ -2,7 +2,7 @@
 
 This userscript (badly) highlights those who have signed the [RMS Support letter](https://github.com/rms-support-letter/rms-support-letter.github.io)
 
-![image](https://user-images.githubusercontent.com/4157860/112740039-0683b400-8fd6-11eb-94cb-8e4907b1dabb.png)
+![image](https://raw.githubusercontent.com/N-R-K/highlight-RMS-supporters/main/1570415871373.gif)
 
 I am by no means a web developer, I threw this together as an learning experiment in GitHub workflows so it probably doesn't work that well
 
