@@ -6,6 +6,8 @@ I am by no means a web developer, I threw this together as an learning experimen
 
 All it does is load an external stylesheet from this repo that is auto-generated from the list of signed names.
 
+The stylesheet is rather large (~75kb) but your browser should cache it after one transfer so it's not a big deal.
+
 Commits and PRs are very welcome :)
 
 License (ironically) under GPLv3 
