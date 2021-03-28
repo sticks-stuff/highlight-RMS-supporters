@@ -25,4 +25,4 @@ names.forEach(function (item) {
 });
 
 console.log(output.slice(0, -2));
-console.log("\{ content: 'Based!'; display: inline-block; padding: 0 7px; font-size: 12px; font-weight: 500; line-height: 18px; border-radius: 2em; border: 1px solid transparent; color: var(--color-pr-state-open-text); background-color: var(--color-pr-state-open-bg);    border-color: var(--color-pr-state-open-border);} \}");
+console.log("\{ content: 'Based!'; display: inline-block; margin-left: 1em; padding: 0 7px; font-size: 12px; font-weight: 500; line-height: 18px; border-radius: 2em; border: 1px solid transparent; color: var(--color-pr-state-open-text); background-color: var(--color-pr-state-open-bg);    border-color: var(--color-pr-state-open-border);} \}");
