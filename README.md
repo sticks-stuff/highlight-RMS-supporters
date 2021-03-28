@@ -1,4 +1,4 @@
-# Highlight RMS supporters
+# Know your frens! Highlight RMS supporters in a frenly green color!
 
 This userscript (badly) highlights those who have signed the [RMS Support letter](https://github.com/rms-support-letter/rms-support-letter.github.io)
 
