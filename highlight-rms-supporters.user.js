@@ -1,6 +1,11 @@
 // ==UserScript==
 // @name            Highlight RMS supporters
-// @author					stick
+// @description     Highlights those who have signed the RMS Support letter
+// @match https://*/*
+// @match http://*/*
+// @author          stick
+// @version         1
+// @namespace https://greasyfork.org/users/710818
 // ==/UserScript==
 
 function addStyleSheet(style){
