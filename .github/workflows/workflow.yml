@@ -34,6 +34,9 @@ jobs:
 
           npx --package yamljs yaml2json _data/signed/ --save
           find _data/signed -name '*.json' -exec cat '{}' + | jq -s '.' > names.json
+      - name: Create new stylesheet
+        run: |
+          node generate-styles.js > styles.css
       - name: Clean Up
         env:
           COMMIT_SHA: ${{ steps.letter.outputs.sha }}
