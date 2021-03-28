@@ -1216,10 +1216,6 @@
     "link": "https://github.com/agentOfChaos"
   },
   {
-    "name": "Dimitri Fruchtenstein",
-    "link": "https://github.com/Fruchtenstein"
-  },
-  {
     "name": "Don Barry",
     "link": "https://don.sirtf.com"
   },
@@ -2168,6 +2164,10 @@
     "link": "https://github.com/RealJTG"
   },
   {
+    "name": "Anatoly Yuzefovich",
+    "link": "https://github.com/snelius30"
+  },
+  {
     "name": "Formakovskiy Alexandr Pavlovich",
     "link": "mailto:Formak21@gmail.com"
   },
@@ -2274,6 +2274,10 @@
   {
     "name": "Artem Shaburov",
     "link": "https://github.com/dublduk"
+  },
+  {
+    "name": "Guo, Xiangyang",
+    "link": "http://gxy.me"
   },
   {
     "name": "Oleg Jukovec",
@@ -2822,10 +2826,6 @@
   {
     "name": "ran-sama",
     "link": "https://github.com/ran-sama"
-  },
-  {
-    "name": "Lorenzo Arcidiaocno",
-    "link": "https://github.com/Arcilollo"
   },
   {
     "name": "Peter Koellner",
@@ -6560,6 +6560,10 @@
     "link": "https://github.com/Prototik"
   },
   {
+    "name": "Kanelis Ilias",
+    "link": "https://github.com/TediCreations"
+  },
+  {
     "name": "Sergey Shamshev",
     "link": "https://github.com/shamshev"
   },
@@ -7092,7 +7096,7 @@
     "link": "https://github.com/makarowserg"
   },
   {
-    "name": "François Polito",
+    "name": "François Polito (FSF Associate Member)",
     "link": "https://github.com/franpoli"
   },
   {
@@ -10668,10 +10672,6 @@
     "link": "https://github.com/ahangarha"
   },
   {
-    "name": "mostfa",
-    "link": "https://t.me/mostfa_23"
-  },
-  {
     "name": "digmorepaka",
     "link": "https://xorg-broke-aga.in"
   },
@@ -11902,6 +11902,10 @@
   {
     "name": "Titov Egor",
     "link": "https://github.com/lunn06"
+  },
+  {
+    "name": "Karl Wakim (nxnjz)",
+    "link": "https://nxnjz.net/"
   },
   {
     "name": "Martin Bílek",
