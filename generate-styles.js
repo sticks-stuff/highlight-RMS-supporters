@@ -5,16 +5,23 @@ let names = JSON.parse(rawdata);
 let output = "";
 
 names.forEach(function (item) {
-	var link = item.link.replace(/(^\w+:|^)\/\//, '');
+	var link = item.link.replace(/^(?:https?:\/\/)?(?:www\.)?/i, "");
 	ghUsername = item.link.split("github.com/")[1];
 	if(ghUsername != undefined) {
-		output += `a[href*="${ghUsername.replace(/\/+$/, '')}"], `; //remove the trailing backslash
+		if(ghUsername.length > 4) { //basic sanity check
+			output += `a[href*="${ghUsername.replace(/\/+$/, '')}"], `; //remove the trailing backslash
+		} else {
+			return;
+		}
 	}
 	else {
-		output += `a[href*="${link}"], `;
+		if(link.length > 4) { //basic sanity check
+			output += `a[href*="${link}"], `;
+		} else {
+			return;
+		}
 	}
 });
 
-output = output.slice(0, -2)
-console.log(output);
+console.log(output.slice(0, -2));
 console.log("\{background-color: Crimson;\}");
