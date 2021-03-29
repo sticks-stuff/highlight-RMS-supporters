@@ -20,12 +20,11 @@ jobs:
         run: |
           wget https://api.github.com/repos/rms-support-letter/rms-support-letter.github.io/tarball -O $COMMIT_SHA
           ls
-      - name: Extract letter signers
+      - name: Extract opt-in letter signers
         env:
           COMMIT_SHA: ${{ steps.letter.outputs.sha }}
         run: |
-          tar -v -xzf $COMMIT_SHA --strip-components=1 $(tar -tzf $COMMIT_SHA | head -1 | cut -f1 -d"/")/_data/signed
-          rm -f _data/signed/sticks-stuf.yaml
+          tar -v -xzf $COMMIT_SHA --strip-components=1 $(tar -tzf $COMMIT_SHA | grep -F "_data/signed/" | grep -F -f optin.txt | xargs)
           ls
       - name: Update Names List
         run: |
