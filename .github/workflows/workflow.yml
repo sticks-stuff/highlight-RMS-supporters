@@ -26,6 +26,7 @@ jobs:
         run: |
           tar -v -xzf $COMMIT_SHA --strip-components=1 $(tar -tzf $COMMIT_SHA | head -1 | cut -f1 -d"/")/_data/signed
           rm -f _data/signed/JesseCharlie.yaml
+          rm -f _data/signed/sticks-stuf.yaml
           ls
       - name: Update Names List
         run: |
