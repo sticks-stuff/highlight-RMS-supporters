@@ -192,6 +192,10 @@
     "link": "https://github.com/i-cant-git"
   },
   {
+    "name": "dev-staff",
+    "link": "https://gitlab.com/dev-staff"
+  },
+  {
     "name": "Oleg Vakheta",
     "link": "https://github.com/helgigit"
   },
@@ -328,6 +332,10 @@
     "link": "https://github.com/Aethusx"
   },
   {
+    "name": "Jeff Hayes",
+    "link": "mailto:jeff.hayes87@gmail.com"
+  },
+  {
     "name": "Matt Strapp",
     "link": "https://github.com/RosstheRoss"
   },
@@ -370,10 +378,6 @@
   {
     "name": "Jedverd Serrano",
     "link": "mailto:jedverd1@gmail.com"
-  },
-  {
-    "name": "Yauheni S.",
-    "link": "https://github.com/Ygenks"
   },
   {
     "name": "Valerio Vaccaro",
@@ -576,12 +580,20 @@
     "link": "https://github.com/mercury233"
   },
   {
+    "name": "Alessandra Minoni",
+    "link": "mailto:lilo@dyne.org"
+  },
+  {
     "name": "Denys Zelenov",
     "link": "https://github.com/torwalds"
   },
   {
     "name": "Niccolo Rigacci",
     "link": "https://github.com/RigacciOrg/"
+  },
+  {
+    "name": "Mert Ö.",
+    "link": "http://www.mert.wtf/"
   },
   {
     "name": "AlexFokin",
@@ -606,6 +618,10 @@
   {
     "name": "Nizhelsky Denis (tisakotu)",
     "link": "https://github.com/tisakotu"
+  },
+  {
+    "name": "nikodis",
+    "link": "http://www.umc.edu.ve"
   },
   {
     "name": "Borys Kabakov",
@@ -654,6 +670,10 @@
   {
     "name": "pachuco",
     "link": "https://github.com/pachuco"
+  },
+  {
+    "name": "Twój Stary",
+    "link": "https://github.com/twojstaryzdomu/"
   },
   {
     "name": "monosans",
@@ -1004,6 +1024,10 @@
     "link": "https://www.ulthar.xyz"
   },
   {
+    "name": "Maxim Gema",
+    "link": "https://github.com/yagema404"
+  },
+  {
     "name": "Vlad Dyachenko",
     "link": "https://github.com/wowinter13"
   },
@@ -1058,6 +1082,10 @@
   {
     "name": "pittuhau",
     "link": "mailto:pittuhau@e.email"
+  },
+  {
+    "name": "Daniel Clarke",
+    "link": "https://danielclarke.dev/"
   },
   {
     "name": "Edward",
@@ -1166,6 +1194,10 @@
   {
     "name": "Hleb Valoshka",
     "link": "https://github.com/375gnu"
+  },
+  {
+    "name": "Egor Klenin",
+    "link": "https://github.com/e-g1gor"
   },
   {
     "name": "Jacob Hinchliffe",
@@ -2048,6 +2080,10 @@
     "link": "https://github.com/kkolyan"
   },
   {
+    "name": "Abhiseck Paira",
+    "link": "mailto:abhiseckpaira@disroot.org"
+  },
+  {
     "name": "Ahmad Yoosofan",
     "link": "https://github.com/yoosofan"
   },
@@ -2284,6 +2320,10 @@
     "link": "https://github.com/nek0bit"
   },
   {
+    "name": "Braddock Gaskill",
+    "link": "http://braddock.com"
+  },
+  {
     "name": "Dennis Podkovyrin",
     "link": "https://github.com/sbj-ss"
   },
@@ -2474,6 +2514,10 @@
   {
     "name": "Tuan Ha",
     "link": "https://github.com/tuanht"
+  },
+  {
+    "name": "Roman Denysov",
+    "link": "https://github.com/imanro"
   },
   {
     "name": "Ivan Dimitrov",
@@ -2828,6 +2872,10 @@
     "link": "https://github.com/TheShich"
   },
   {
+    "name": "Anatoly S",
+    "link": "https://codeberg.org/AnatolyS"
+  },
+  {
     "name": "Marlon Groenendijk",
     "link": "http://marlon.ws/"
   },
@@ -2922,6 +2970,10 @@
   {
     "name": "Rein Zustand (rht)",
     "link": "https://github.com/rht"
+  },
+  {
+    "name": "Sergio Sorrenti",
+    "link": "https://simplemachines.it"
   },
   {
     "name": "parsnip42",
@@ -3054,6 +3106,10 @@
   {
     "name": "Tom Konidas",
     "link": "https://github.com/tomkonidas"
+  },
+  {
+    "name": "Cristóbal Gallardo-Lüttecke",
+    "link": "https://codeberg.org/rhughar"
   },
   {
     "name": "andvar",
@@ -3216,6 +3272,10 @@
     "link": "https://github.com/FawadMirza32"
   },
   {
+    "name": "Iskander F.",
+    "link": "https://github.com/Iskander14yo"
+  },
+  {
     "name": "Ilya Orluk",
     "link": "https://github.com/IlyaOrluk"
   },
@@ -3292,8 +3352,16 @@
     "link": "https://github.com/llcc"
   },
   {
+    "name": "Oleg Morozov",
+    "link": "https://github.com/mopo3ilo"
+  },
+  {
     "name": "Andre Augusto",
     "link": "https://github.com/Naranbataar"
+  },
+  {
+    "name": "Anton Yarish",
+    "link": "https://github.com/AntonYarish"
   },
   {
     "name": "Alexey Solovyov",
@@ -3306,6 +3374,10 @@
   {
     "name": "xTpx",
     "link": "https://github.com/xTpx"
+  },
+  {
+    "name": "CrazyAlex25",
+    "link": "https://github.com/CrazyAlex25"
   },
   {
     "name": "Daniel Menelkir",
@@ -3366,6 +3438,10 @@
   {
     "name": "Kulba Nikolay",
     "link": "https://github.com/MartellX"
+  },
+  {
+    "name": "Angel Perez",
+    "link": "https://github.com/drlorente97"
   },
   {
     "name": "ma5ksh0w",
@@ -3776,6 +3852,10 @@
     "link": "https://github.com/pRot0ta1p"
   },
   {
+    "name": "Enmanuel E. Saravia",
+    "link": "https://codeberg.org/saravia"
+  },
+  {
     "name": "Alexander Mcmahon",
     "link": "https://1055t.xyz"
   },
@@ -3936,6 +4016,10 @@
     "link": "https://github.com/ilmirus"
   },
   {
+    "name": "Prot EuPhobos",
+    "link": "https://github.com/euphobos"
+  },
+  {
     "name": "Kirill Rodriguez",
     "link": "https://github.com/theoden8"
   },
@@ -4080,6 +4164,10 @@
     "link": "https://github.com/obxd"
   },
   {
+    "name": "Alexandra P.",
+    "link": "https://codeberg.org/luchik"
+  },
+  {
     "name": "Alexey Bibus",
     "link": "https://github.com/AlexElizard"
   },
@@ -4102,6 +4190,10 @@
   {
     "name": "Süleyman Poyraz",
     "link": "https://github.com/Zaryob"
+  },
+  {
+    "name": "Daniil Belyakov",
+    "link": "https://github.com/sovat"
   },
   {
     "name": "Aleksej Serdyukov (former Mozilla [2005-2017] and OpenFoodFacts contributor)",
@@ -5096,6 +5188,10 @@
     "link": "https://github.com/diegogangl"
   },
   {
+    "name": "anon72",
+    "link": "https://github.com/anon72"
+  },
+  {
     "name": "Sin2x",
     "link": "mailto:sinlich@gmail.com"
   },
@@ -5432,6 +5528,10 @@
     "link": "https://github.com/ClaudioRoncaglio"
   },
   {
+    "name": "Thomas Ferry",
+    "link": "https://twitter.com/jinzodefiler"
+  },
+  {
     "name": "Michael Gonchar",
     "link": "https://github.com/MichaelGonchar"
   },
@@ -5466,6 +5566,10 @@
   {
     "name": "Sergei Suvorov",
     "link": "https://github.com/hscpy"
+  },
+  {
+    "name": "Connor Brown",
+    "link": "https://www.connorjlbrown.xyz"
   },
   {
     "name": "Justin Agbon",
@@ -5638,6 +5742,10 @@
   {
     "name": "Mikhail Alontsev",
     "link": "https://github.com/em2er"
+  },
+  {
+    "name": "Max Eliseev",
+    "link": "https://github.com/mxseev"
   },
   {
     "name": "Orin Serimon",
@@ -5914,6 +6022,10 @@
   {
     "name": "Jalol Khamroev",
     "link": "https://github.com/CODPUD"
+  },
+  {
+    "name": "Raffael Stocker",
+    "link": "https://codeberg.org/rstocker"
   },
   {
     "name": "dom",
@@ -6368,6 +6480,10 @@
     "link": "https://github.com/orothorn"
   },
   {
+    "name": "Vladimir K",
+    "link": "https://codeberg.org/vprk"
+  },
+  {
     "name": "Ivan Kmeťo",
     "link": "https://github.com/kkmzero"
   },
@@ -6596,12 +6712,20 @@
     "link": "https://github.com/blackveen"
   },
   {
+    "name": "Alexander Pekker",
+    "link": "https://codeberg.org/alp2003"
+  },
+  {
     "name": "Digit",
     "link": "https://notabug.org/Digit"
   },
   {
     "name": "Alessandro Ianne",
     "link": "https://github.com/alexanderi96"
+  },
+  {
+    "name": "Zherdetskiy Rostislav",
+    "link": "https://github.com/rostisluv"
   },
   {
     "name": "Donovan Tremura",
@@ -6686,6 +6810,10 @@
   {
     "name": "Johnathan Farmer",
     "link": "https://codeberg.org/eastcoastghost"
+  },
+  {
+    "name": "Igor Potseluev (Polytech Software)",
+    "link": "https://www.facebook.com/igor.potseluev.7"
   },
   {
     "name": "Pablo Garro",
@@ -6972,6 +7100,10 @@
     "link": "https://github.com/drzraf"
   },
   {
+    "name": "i-zu",
+    "link": "https://github.com/i-zu"
+  },
+  {
     "name": "Wyatt Osterling",
     "link": "https://github.com/wizardwatch"
   },
@@ -7014,6 +7146,10 @@
   {
     "name": "ginhelly",
     "link": "https://github.com/ginhelly"
+  },
+  {
+    "name": "Pavel Veretennikov",
+    "link": "http://devops.care"
   },
   {
     "name": "غيلان حجر",
@@ -7134,6 +7270,10 @@
   {
     "name": "Pavel Dmitriev",
     "link": "https://github.com/dantalian-pv"
+  },
+  {
+    "name": "Igor Mosyagin",
+    "link": "https://github.com/cra"
   },
   {
     "name": "Evgeny Stambulchik (principal contributor to [xm]grace and pdfpc)",
@@ -7560,6 +7700,10 @@
     "link": "https://github.com/papaere"
   },
   {
+    "name": "namhae-kkot",
+    "link": "https://codeberg.org/namhae-kkot"
+  },
+  {
     "name": "Kuzhekov Sergey",
     "link": "https://github.com/SergeKu"
   },
@@ -7634,6 +7778,10 @@
   {
     "name": "Ben Siraphob (NixOS contributor)",
     "link": "https://github.com/siraben"
+  },
+  {
+    "name": "Kevin S. Van Horn",
+    "link": "http://ksvanhorn.com"
   },
   {
     "name": "Alessandro De Bonis Trapella",
@@ -7800,6 +7948,10 @@
     "link": "https://github.com/ironsm4sh"
   },
   {
+    "name": "Oneoa",
+    "link": "https://github.com/oneoa"
+  },
+  {
     "name": "yw662",
     "link": "https://github.com/yw662"
   },
@@ -7894,6 +8046,10 @@
   {
     "name": "Megumin",
     "link": "https://megu.dev"
+  },
+  {
+    "name": "Oleksandr Yemolenko",
+    "link": "https://github.com/OleksandrYemolenko"
   },
   {
     "name": "Vladislav Dzhidzhoev",
@@ -8004,6 +8160,10 @@
     "link": "https://github.com/Szer/"
   },
   {
+    "name": "Hector White",
+    "link": "https://codeberg.org/hector.white"
+  },
+  {
     "name": "r3d9477",
     "link": "https://github.com/R3D9477"
   },
@@ -8106,6 +8266,10 @@
   {
     "name": "Pierrick Goujon",
     "link": "http://triskel.org"
+  },
+  {
+    "name": "Grender",
+    "link": "https://github.com/GrenderG"
   },
   {
     "name": "xor2003",
@@ -8214,6 +8378,10 @@
   {
     "name": "adbenitez",
     "link": "https://github.com/adbenitez"
+  },
+  {
+    "name": "Locky",
+    "link": "https://locky.neocities.org"
   },
   {
     "name": "soup000",
@@ -8596,6 +8764,10 @@
     "link": "https://github.com/NinjaInFog"
   },
   {
+    "name": "Marcus Del Greco",
+    "link": "/#"
+  },
+  {
     "name": "Gian Maria Viglianti",
     "link": "https://github.com/gimavi"
   },
@@ -8858,6 +9030,10 @@
   {
     "name": "Moritz Strohm",
     "link": "https://codeberg.org/ncc1988"
+  },
+  {
+    "name": "Sherzod Sadriddinov",
+    "link": "mailto:sher.sadriddinov@gmail.com"
   },
   {
     "name": "Stanislav Shmarov",
@@ -9248,6 +9424,10 @@
     "link": "https://github.com/esnelubov"
   },
   {
+    "name": "Mariano Macchi",
+    "link": "https://github.com/marianomacchi"
+  },
+  {
     "name": "nwx",
     "link": "https://github.com/nwx"
   },
@@ -9318,6 +9498,10 @@
   {
     "name": "Maximilian Power",
     "link": "https://github.com/maxp779"
+  },
+  {
+    "name": "Uncle Yrjo",
+    "link": "mailto:pojral.posral@gmail.com"
   },
   {
     "name": "buckket",
@@ -9984,6 +10168,10 @@
     "link": "https://kpworld.xyz/"
   },
   {
+    "name": "Arthur McCulloch",
+    "link": "mailto:amcc99@pm.me"
+  },
+  {
     "name": "Vladimir Kazanov",
     "link": "https://github.com/vkazanov"
   },
@@ -10136,6 +10324,10 @@
     "link": "https://github.com/shikiroot/"
   },
   {
+    "name": "Evgeniy Semenyachenko",
+    "link": "https://github.com/evgs89"
+  },
+  {
     "name": "IanCobb",
     "link": "https://https://github.com/iancobb"
   },
@@ -10164,10 +10356,6 @@
     "link": "https://github.com/phpoenx"
   },
   {
-    "name": "anon72",
-    "link": "https://github.com/anon72"
-  },
-  {
     "name": "tetafro",
     "link": "https://github.com/tetafro"
   },
@@ -10194,6 +10382,10 @@
   {
     "name": "Valentin Popov",
     "link": "https://github.com/valentineus"
+  },
+  {
+    "name": "Mikhail V. Shokhirev (Mike Shock)",
+    "link": "https://codeberg.org/mshock"
   },
   {
     "name": "Sorokin Maxim",
@@ -10712,6 +10904,10 @@
     "link": "https://github.com/ruslangajiev"
   },
   {
+    "name": "Elias Watson",
+    "link": "mailto:mults@yandex.ru"
+  },
+  {
     "name": "Anders Vad Haraldsen",
     "link": "mailto:opusman3@gmail.com"
   },
@@ -10812,6 +11008,10 @@
     "link": "https://github.com/ekzotech"
   },
   {
+    "name": "Boris Kukushkin",
+    "link": "https://codeberg.org/UncleIS"
+  },
+  {
     "name": "Artur Sinila (Void Linux contributor, but I don't represent the whole organisation)",
     "link": "https://logarithmus.dev"
   },
@@ -10890,6 +11090,10 @@
   {
     "name": "radiden",
     "link": "https://rai.cx/"
+  },
+  {
+    "name": "Samoglas",
+    "link": "https://habr.com/ru/users/samoglas/comments/"
   },
   {
     "name": "Giulio Segalini",
@@ -11108,6 +11312,10 @@
     "link": "https://github.com/cocatrip"
   },
   {
+    "name": "Graham Lee",
+    "link": "https://sicpers.info"
+  },
+  {
     "name": "Matvey Matvienko",
     "link": "https://github.com/mfg637"
   },
@@ -11142,6 +11350,10 @@
   {
     "name": "William Caldwell",
     "link": "https://github.com/Wonko7"
+  },
+  {
+    "name": "Max Shumeyko",
+    "link": "https://gitlab.com/Max_Shumeyko"
   },
   {
     "name": "atlcell",
@@ -11190,6 +11402,10 @@
   {
     "name": "Anton Vysotskiy",
     "link": "https://github.com/pm-anton-vysotskiy"
+  },
+  {
+    "name": "Vladimir Panov",
+    "link": "mailto:gbr@voidland.org"
   },
   {
     "name": "Anton Penyagin",
@@ -11548,6 +11764,10 @@
     "link": "https://github.com/milanandreew"
   },
   {
+    "name": "Ivan Smirnov",
+    "link": "https://codeberg.org/nkzsiuimy11"
+  },
+  {
     "name": "Nicolas Doye",
     "link": "https://github.com/nicdoye"
   },
@@ -11586,6 +11806,10 @@
   {
     "name": "dantecpu",
     "link": "https://github.com/dantecpu"
+  },
+  {
+    "name": "Jan Drabner",
+    "link": "https://github.com/thesheeep"
   },
   {
     "name": "Mikhail",
@@ -11784,6 +12008,10 @@
     "link": "https://github.com/CobaltMK1"
   },
   {
+    "name": "Guillermo Molleda Jimena",
+    "link": "http://guillermo.molleda.com/"
+  },
+  {
     "name": "verisimilitude",
     "link": "http://verisimilitudes.net/"
   },
@@ -11880,6 +12108,10 @@
     "link": "https://github.com/ccorn"
   },
   {
+    "name": "Александр Жибалов",
+    "link": "https://github.com/AlexanderZhibalov"
+  },
+  {
     "name": "Dzmitry Malyshau",
     "link": "https://github.com/kvark"
   },
@@ -11894,6 +12126,10 @@
   {
     "name": "Nick Ribal (Self employed)",
     "link": "https://github.com/elektronik2k5"
+  },
+  {
+    "name": "Saheidty (Sereja)",
+    "link": "mailto:saheidty@gmail.com"
   },
   {
     "name": "Kauri Kallaste",
@@ -11988,6 +12224,10 @@
     "link": "https://github.com/h0cheung"
   },
   {
+    "name": "fojetin",
+    "link": "https://github.com/fojetin"
+  },
+  {
     "name": "laszloer",
     "link": "https://github.com/LaszloEr"
   },
@@ -12030,6 +12270,10 @@
   {
     "name": "Denis Menshchikov",
     "link": "https://github.com/declard"
+  },
+  {
+    "name": "Simone Mario Lombardo",
+    "link": "https://simonelombardo.com"
   },
   {
     "name": "Marat Gaianov",
@@ -12306,6 +12550,10 @@
   {
     "name": "Mohit Yadav",
     "link": "https://github.com/0ver3inker"
+  },
+  {
+    "name": "Arthur Mingulov",
+    "link": "mailto:mingulov_ar@pm.me"
   },
   {
     "name": "rydnr",
@@ -12846,6 +13094,10 @@
   {
     "name": "gelowin",
     "link": "https://github.com/gelowin"
+  },
+  {
+    "name": "Ivan Pustovarov",
+    "link": "mailto:silverflash150@gmail.com"
   },
   {
     "name": "Nadav Kavalerchik",
@@ -13432,6 +13684,10 @@
     "link": "https://mcdim.xyz"
   },
   {
+    "name": "4v0v",
+    "link": "https://github.com/4v0v"
+  },
+  {
     "name": "Mikhail Kasimov",
     "link": "https://github.com/MikhailKasimov"
   },
@@ -13454,6 +13710,10 @@
   {
     "name": "zanculmarktum",
     "link": "https://github.com/zanculmarktum"
+  },
+  {
+    "name": "Stas Dachinskiy",
+    "link": "https://github.com/stasdachinsky"
   },
   {
     "name": "Daniel Efimenko (Some cross-platform libraries for microcontrollers)",
@@ -13538,6 +13798,10 @@
   {
     "name": "Vladislav Sedov",
     "link": "https://github.com/Mereng"
+  },
+  {
+    "name": "Aleksandr Tretiakov",
+    "link": "https://github.com/backsapc"
   },
   {
     "name": "Frederik Questier",
@@ -13628,6 +13892,14 @@
     "link": "http://dipc.ehu.es/giedke/"
   },
   {
+    "name": "Aleksandr Vakushin",
+    "link": "https://github.com/VakushinAlex"
+  },
+  {
+    "name": "Guillaume Salvan (LibreTech)",
+    "link": "https://libretech.eu/"
+  },
+  {
     "name": "Daniel (Atie) P",
     "link": "https://github.com/AtieP"
   },
@@ -13646,6 +13918,10 @@
   {
     "name": "Lubomir Kuznetsov",
     "link": "https://github.com/LinDevHard"
+  },
+  {
+    "name": "Xavi Conde",
+    "link": "https://codeberg.org/xaviconde"
   },
   {
     "name": "Oleg Makarikhin",
@@ -13730,6 +14006,10 @@
   {
     "name": "Grigory Snegovsky",
     "link": "https://github.com/gsnegovskiy"
+  },
+  {
+    "name": "Johan Hanson",
+    "link": "https://github.com/findecanor/"
   },
   {
     "name": "Reese Armstrong (R33S3)",
@@ -13830,6 +14110,10 @@
   {
     "name": "kerry scott",
     "link": "https://www.facebook.com/kerryjhscott"
+  },
+  {
+    "name": "Robert Milson",
+    "link": "https://github.com/rmilson"
   },
   {
     "name": "CrazyPython",
@@ -14010,6 +14294,10 @@
   {
     "name": "Yaroslav Starostin",
     "link": "https://github.com/yistarostin"
+  },
+  {
+    "name": "Artur Soloviev, ex- Software Engineer at Yandex",
+    "link": "https://github.com/so1ov"
   },
   {
     "name": "Job Bautista",
@@ -14460,6 +14748,10 @@
     "link": "https://github.com/djbaldey"
   },
   {
+    "name": "Igor Kraglik",
+    "link": "https://github.com/kraglik"
+  },
+  {
     "name": "mch735",
     "link": "https://github.com/mch735"
   },
@@ -14546,6 +14838,10 @@
   {
     "name": "Nazih Boudaakkar",
     "link": "https://github.com/Spounka"
+  },
+  {
+    "name": "Denis Bykov",
+    "link": "https://github.com/denisbully"
   },
   {
     "name": "veneris",
@@ -14790,6 +15086,10 @@
   {
     "name": "David Oberhollenzer",
     "link": "https://github.com/AgentD"
+  },
+  {
+    "name": "Hans Bezemer",
+    "link": "https://sourceforge.net/projects/forth-4th/"
   },
   {
     "name": "Sergey Shurlakov",
