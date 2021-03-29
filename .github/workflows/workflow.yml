@@ -25,6 +25,7 @@ jobs:
           COMMIT_SHA: ${{ steps.letter.outputs.sha }}
         run: |
           tar -v -xzf $COMMIT_SHA --strip-components=1 $(tar -tzf $COMMIT_SHA | head -1 | cut -f1 -d"/")/_data/signed
+          rm -f _data/signed/JesseCharlie.yaml
           ls
       - name: Update Names List
         run: |
