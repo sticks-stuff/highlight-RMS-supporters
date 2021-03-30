@@ -14,7 +14,7 @@ jobs:
           echo ::set-output name=sha::$(curl -sL https://api.github.com/repos/rms-support-letter/rms-support-letter.github.io/branches/master | jq -r ".commit.sha")
           echo ::set-output name=current_sha::$(<lettersha.version)
       - name: Download new letter signers
-        if: steps.letter.outputs.current_sha != steps.letter.outputs.sha
+        #if: steps.letter.outputs.current_sha != steps.letter.outputs.sha
         env:
           COMMIT_SHA: ${{ steps.letter.outputs.sha }}
         run: |
