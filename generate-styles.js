@@ -10,7 +10,7 @@ names.forEach(function (item) {
 	   	ghUsername = url.parse(item.link).pathname.slice(1);
 		if(ghUsername != undefined) {
 			if(ghUsername.length > 4) { //basic sanity check
-				output += `a[href*="github.com/${ghUsername}"], `; //remove the trailing backslash
+				output += `a[href="/${ghUsername}"], `; //remove the trailing backslash
 			} else {
 				return;
 			}
