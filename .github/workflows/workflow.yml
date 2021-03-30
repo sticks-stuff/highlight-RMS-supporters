@@ -30,8 +30,6 @@ jobs:
           ls
       - name: Update Names List
         run: |
-          # Remove the original JSON
-          rm -fr names.json
           # Convert all the YAML files to one big JSON file
 
           npx --package yamljs yaml2json _data/signed/ --save
@@ -45,6 +43,8 @@ jobs:
         run: |
           rm $COMMIT_SHA
           rm -r _data/signed
+          rm -fr names.json
+          
           # Update current SHA version
           echo ${{ steps.letter.outputs.sha }} > lettersha.version
       - name: Commit and Push
