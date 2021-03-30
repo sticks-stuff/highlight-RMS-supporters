@@ -6,10 +6,12 @@ let names = JSON.parse(rawdata);
 let output = "";
 
 names.forEach(function (item) {
-	if(item.link.includes("github.com")) {
+	const link = item.link.trim()
+	const without_protocol = link.replace(/^https?:\/\//,'')
+	if(without_protocol.startsWith("github.com/")) {
 	   	ghUsername = url.parse(item.link).pathname.slice(1);
 		if(ghUsername != undefined) {
-			if(ghUsername.length > 4) { //basic sanity check
+			if(ghUsername.length > 4 && !ghUsername.includes("]")) { //basic sanity check
 				output += `a[href$="${ghUsername}"], `; //remove the trailing backslash
 			} else {
 				return;
