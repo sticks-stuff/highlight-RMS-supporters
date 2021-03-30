@@ -6,19 +6,20 @@ let names = JSON.parse(rawdata);
 let output = "";
 
 names.forEach(function (item) {
-	var link = item.link.replace(/^(?:https?:\/\/)?(?:www\.)?/i, "");
-	link = link.split("?")[0];
-	let ghUsername = url.parse(item.link).pathname?.slice(1)
-	if(ghUsername != undefined) {
-		if(ghUsername.length > 6 && ghUsername != "event") { //basic sanity check
-			output += `a[href*="${ghUsername.replace(/\/+$/, '')}"], `; //remove the trailing backslash
-		} else {
-			return;
+	if(item.link.includes("github.com") {
+	   	let ghUsername = url.parse(item.link).pathname?.slice(1);
+		if(ghUsername != undefined) {
+			if(ghUsername.length > 6 && ghUsername != "event") { //basic sanity check
+				output += `a[href*="${ghUsername.replace(/\/+$/, '')}"], `; //remove the trailing backslash
+			} else {
+				return;
+			}
 		}
 	}
+
 	else {
-		if(link.length > 6) { //basic sanity check
-			output += `a[href*="${link}"], `;
+		if(item.link > 4) { //basic sanity check
+			output += `a[href*="${item.link}"], `;
 		} else {
 			return;
 		}
