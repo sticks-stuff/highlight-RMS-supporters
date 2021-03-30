@@ -7,19 +7,13 @@ let output = "";
 
 names.forEach(function (item) {
 	if(item.link.includes("github.com")) {
-	   	ghUsername = url.parse(item.link).pathname?.slice(1);
+	   	ghUsername = url.parse(item.link).pathname.slice(1);
 		if(ghUsername != undefined) {
-			if(ghUsername.length > 6 && ghUsername != "event") { //basic sanity check
-				output += `a[href*="${ghUsername.replace(/\/+$/, '')}"], `; //remove the trailing backslash
+			if(ghUsername.length > 4) { //basic sanity check
+				output += `a[href="github.com/${ghUsername}"], `; //remove the trailing backslash
 			} else {
 				return;
 			}
-		}
-	} else {
-		if(item.link > 4) { //basic sanity check
-			output += `a[href*="${item.link}"], `;
-		} else {
-			return;
 		}
 	}
 });
