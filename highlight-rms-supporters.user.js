@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name            Highlight RMS supporters
 // @description     Highlights those who have signed the RMS Support letter
-// @include         *
+// @match           https://github.com/*
 // @author          stick
-// @version         1.1
+// @version         1.2
 // @homepageURL     https://github.com/sticks-stuff/highlight-RMS-supporters
 // @namespace       https://greasyfork.org/users/710818
 // ==/UserScript==
