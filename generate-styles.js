@@ -50,7 +50,7 @@ function isGithubUsernameReasonable(username) {
 }
 
 names.forEach(function (item) {
-	let ghUsername = linkToGithubUsername(item);
+	let ghUsername = linkToGithubUsername(item.link);
 	if (ghUsername !== null && isGithubUsernameReasonable(ghUsername)) {
 		output += `a[href$="${ghUsername}"], `;
 	}
