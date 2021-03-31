@@ -13,7 +13,7 @@ names.forEach(function (item) {
 	   	const sliced = url.parse(`https://${without_protocol}`).pathname.slice(1);
 		if(sliced != undefined) {
 			const stripped = sliced.replace(/\/*$/, "")
-			const matched = stripped.match(/^[a-z\d](?:[a-z\d]|-){0,38}$/i)
+			const matched = stripped.match(/^(?:orgs\/)?[a-z\d](?:[a-z\d]|-){0,38}$/i)
 			
 			if (matched) {
 				const ghUsername = matched[0];
