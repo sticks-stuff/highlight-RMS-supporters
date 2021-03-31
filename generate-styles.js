@@ -18,7 +18,6 @@ function absolute(parts) {
 		} else {
 			stack.push(part);
 		}
-	}
 
 	return stack;
 }
