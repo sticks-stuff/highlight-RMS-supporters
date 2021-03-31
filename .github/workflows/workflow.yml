@@ -5,49 +5,67 @@ on:
   workflow_dispatch:
 jobs:
   updateNames:
-    runs-on: ubuntu-latest
+    runs-on: windows-2019
     steps:
       - uses: actions/checkout@v2
       - name: Get Latest Letter SHA
         id: letter
+        shell: pwsh
         run: |
-          echo ::set-output name=sha::$(curl -sL https://api.github.com/repos/rms-support-letter/rms-support-letter.github.io/branches/master | jq -r ".commit.sha")
-          echo ::set-output name=current_sha::$(<lettersha.version)
+          $response = Invoke-WebRequest https://api.github.com/repos/rms-support-letter/rms-support-letter.github.io/branches/master
+          $responseJson = ConvertFrom-Json $response.Content
+          $sha = $responseJson.commit.sha
+          $currentSha = Get-Content 'lettersha.version'
+          Write-Output "::set-output name=sha::$sha"
+          Write-Output "::set-output name=current_sha::$currentSha"
       - name: Download new letter signers
         if: steps.letter.outputs.current_sha != steps.letter.outputs.sha
         env:
           COMMIT_SHA: ${{ steps.letter.outputs.sha }}
+        shell: pwsh
         run: |
-          wget https://api.github.com/repos/rms-support-letter/rms-support-letter.github.io/tarball -O $COMMIT_SHA
-          ls
+          Invoke-WebRequest `
+            -OutFile $ENV:COMMIT_SHA `
+            -Uri https://api.github.com/repos/rms-support-letter/rms-support-letter.github.io/tarball
+          Get-ChildItem
       - name: Extract letter signers
         env:
           COMMIT_SHA: ${{ steps.letter.outputs.sha }}
+        shell: pwsh
         run: |
-          tar -v -xzf $COMMIT_SHA --strip-components=1 $(tar -tzf $COMMIT_SHA | head -1 | cut -f1 -d"/")/_data/signed
-          rm -f _data/signed/sticks-stuf.yaml
-          rm -f _data/signed/davtur19.yaml
-          ls
+          tar -v -xzf $ENV:COMMIT_SHA --strip-components=1 '*/_data/signed'
+          Remove-Item -ErrorAction SilentlyContinue _data/signed/sticks-stuf.yaml
+          Remove-Item -ErrorAction SilentlyContinue _data/signed/davtur19.yaml
+          Get-ChildItem
       - name: Update Names List
+        shell: pwsh
         run: |
           # Convert all the YAML files to one big JSON file
 
           npx --package yamljs yaml2json _data/signed/ --save
-          find _data/signed -name '*.json' -exec cat '{}' + | jq -s '.' > names.json
+          $allData = @()
+          foreach ($item in Get-ChildItem -Filter '*.json' _data/signed) {
+            $data = Get-Content $item.FullName | ConvertFrom-Json
+            $allData += @($data)
+          }
+          ConvertTo-Json $allData | Out-File -Encoding UTF8NoBOM names.json
       - name: Create new stylesheet
+        shell: pwsh
         run: |
           node generate-styles.js > styles.css
       - name: Clean Up
         env:
           COMMIT_SHA: ${{ steps.letter.outputs.sha }}
+        shell: pwsh
         run: |
-          rm $COMMIT_SHA
-          rm -r _data/signed
-          rm -fr names.json
+          Remove-Item $ENV:COMMIT_SHA
+          Remove-Item names.json
+          Remove-Item -Recurse _data/signed
           
           # Update current SHA version
-          echo ${{ steps.letter.outputs.sha }} > lettersha.version
+          Write-Output ${{ steps.letter.outputs.sha }} > lettersha.version
       - name: Commit and Push
+        shell: pwsh
         run: |
           git config --global user.name 'RMS Supporter Bot'
           git config --global user.email 'rmssupporterbot@users.noreply.github.com'
