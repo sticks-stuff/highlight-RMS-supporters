@@ -5,16 +5,54 @@ let rawdata = fs.readFileSync('names.json');
 let names = JSON.parse(rawdata);
 let output = "";
 
+function linkToGithubUsername(rawLink) {
+	// if the link is a link to a GitHub user, return the username in
+	// URI-escaped form. otherwise, return `null`.
+
+	if (!(typeof rawLink === 'string' || rawLink instanceof String)) {
+		// the link is not a string
+		return null;
+	}
+
+	// truncate to avoid maliciously excessively long URLs
+	let link = url.parse(rawLink.slice(0, 100));
+
+	if (!(link.protocol == 'http:' || link.protocol == 'https:')) {
+		// link is not HTTP(S)
+		return null;
+	}
+	if (!(link.host == 'github.com' || link.host == 'www.github.com')) {
+		// link is not github.com
+		return null;
+	}
+
+	// we `.slice(1)` to remove the leading backslash
+	let pathParts = link.pathname.slice(1).split('/');
+	if (pathParts.length != 1) {
+		// link has the wrong number of path parts
+		return null;
+	}
+
+	// url.parse automatically performs URI escaping
+	return pathParts[0];
+}
+
+function isGithubUsernameReasonable(username) {
+	// collection of sanity checks on github usernames.
+	// returns `true` if passes all sanity checks.
+
+	if (username.length <= 4) {
+		// username is too short
+		return false;
+	}
+
+	return true;
+}
+
 names.forEach(function (item) {
-	if(item.link.includes("github.com")) {
-	   	ghUsername = url.parse(item.link).pathname.slice(1);
-		if(ghUsername != undefined) {
-			if(ghUsername.length > 4) { //basic sanity check
-				output += `a[href$="${ghUsername}"], `; //remove the trailing backslash
-			} else {
-				return;
-			}
-		}
+	let ghUsername = linkToGithubUsername(item);
+	if (ghUsername !== null && isGithubUsernameReasonable(ghUsername)) {
+		output += `a[href$="${ghUsername}"], `;
 	}
 });
 
