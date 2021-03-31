@@ -5,21 +5,76 @@ let rawdata = fs.readFileSync('names.json');
 let names = JSON.parse(rawdata);
 let output = "";
 
-names.forEach(function (item) {
-	const link = item.link.trim().slice(0, 100)
-	const without_protocol = link.replace(/^(?:https?:\/\/)*/,'')
+function absolute(parts) {
+	const stack = [];
 
-	if(without_protocol.startsWith("github.com") || without_protocol.startsWith("www.github.com")) {
-	   	const sliced = url.parse(`https://${without_protocol}`).pathname.slice(1, 50);
-		if(sliced != undefined) {
-			const stripped = sliced.replace(/\/*$/, "")
-			const matched = stripped.match(/^(?:orgs\/)?[a-z\d](?:[a-z\d]|-){0,38}/i)
-			
-			if (matched) {
-				const ghUsername = matched[0];
-				output += `a[href$="${ghUsername}"], `;
-			}
+	for (const part of parts) {
+		if (part === "" || part === ".") {
+			continue;
 		}
+		
+		if (part === "..") {
+			stack.pop();
+		} else {
+			stack.push(part);
+		}
+	}
+
+	return stack;
+}
+
+function linkToGithubUsername(rawLink) {
+	// if the link is a link to a GitHub user, return the username in
+	// URI-escaped form. otherwise, return `null`.
+
+	if (!(typeof rawLink === 'string' || rawLink instanceof String)) {
+		// the link is not a string
+		return null;
+	}
+
+	let link = url.parse(rawLink);
+
+	if (!(link.protocol == 'http:' || link.protocol == 'https:')) {
+		// link is not HTTP(S)
+		return null;
+	}
+	if (!(link.host == 'github.com' || link.host == 'www.github.com')) {
+		// link is not github.com
+		return null;
+	}
+
+	// we `.slice(1)` to remove the leading backslash.
+	let pathParts = absolute(link.pathname.split('/'));
+
+	if (pathParts.length == 0) {
+		// link has the wrong number of path parts
+		return null;
+	}
+
+	// url.parse automatically performs URI escaping
+	if (pathParts[0] === "orgs" && pathParts.length >= 2) { // orgs check
+		return pathParts[1];
+	} else {
+		return pathParts[0];
+	}
+}
+
+function isGithubUsernameReasonable(username) {
+	// collection of sanity checks on github usernames.
+	// returns `true` if passes all sanity checks.
+
+	if (username.length <= 2) {
+		// username is too short
+		return false;
+	}
+
+	return true;
+}
+
+names.forEach(function (item) {
+	let ghUsername = linkToGithubUsername(item.link);
+	if (ghUsername !== null && isGithubUsernameReasonable(ghUsername)) {
+		output += `a[href$="${ghUsername}"], `;
 	}
 });
 
