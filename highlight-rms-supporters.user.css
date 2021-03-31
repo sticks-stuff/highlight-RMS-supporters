@@ -1,9 +1,9 @@
-/* ==UserScript==
+/* ==UserStyle==
 @name            Highlight RMS supporters
 @description     Highlights those who have signed the RMS Support letter
 @match           https://github.com/*
 @author          stick
 @version         1.3
 @homepageURL     https://github.com/sticks-stuff/highlight-RMS-supporters
-==/UserScript== */
+==/UserStyle== */
 @import "https://sticks-stuff.github.io/highlight-RMS-supporters/styles.css";
