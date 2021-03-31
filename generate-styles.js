@@ -6,23 +6,18 @@ let names = JSON.parse(rawdata);
 let output = "";
 
 names.forEach(function (item) {
-	const link = item.link.trim()
-	const without_protocol = link.replace(/^https?:\/\//,'')
+	const link = item.link.trim().slice(0, 100)
+	const without_protocol = link.replace(/^(?:https?:\/\/)*/,'')
 
 	if(without_protocol.startsWith("github.com") || without_protocol.startsWith("www.github.com")) {
-	   	const sliced = url.parse(`https://${without_protocol}`).pathname.slice(1);
+	   	const sliced = url.parse(`https://${without_protocol}`).pathname.slice(1, 50);
 		if(sliced != undefined) {
 			const stripped = sliced.replace(/\/*$/, "")
-			const matched = stripped.match(/^(?:orgs\/)?[a-z\d](?:[a-z\d]|-){0,38}$/i)
+			const matched = stripped.match(/^(?:orgs\/)?[a-z\d](?:[a-z\d]|-){0,38}/i)
 			
 			if (matched) {
 				const ghUsername = matched[0];
-	
-				if(ghUsername.length > 4) { //basic sanity
-						output += `a[href$="${ghUsername}"], `; //remove the trailing backslash
-				} else {
-					return;
-				}
+				output += `a[href$="${ghUsername}"], `;
 			}
 		}
 	}
