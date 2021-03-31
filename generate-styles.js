@@ -9,10 +9,10 @@ names.forEach(function (item) {
 	const link = item.link.trim()
 	const without_protocol = link.replace(/^https?:\/\//,'')
 
-	if(without_protocol.startsWith("github.com")) {
+	if(without_protocol.startsWith("github.com") || without_protocol.startsWith("www.github.com")) {
 	   	const sliced = url.parse(`https://${without_protocol}`).pathname.slice(1);
 		if(sliced != undefined) {
-			const stripped = sliced.replace(/\/$/, "")
+			const stripped = sliced.replace(/\/*$/, "")
 			const matched = stripped.match(/^[a-z\d](?:[a-z\d]|-){0,38}$/i)
 			
 			if (matched) {
