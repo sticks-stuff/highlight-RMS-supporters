@@ -5,6 +5,23 @@ let rawdata = fs.readFileSync('names.json');
 let names = JSON.parse(rawdata);
 let output = "";
 
+function absolute(parts) {
+	const stack = [];
+
+	for (const part of parts) {
+		if (part === "" || part === ".") {
+			continue;
+		}
+		
+		if (part === "..") {
+			stack.pop();
+		} else {
+			stack.push(part);
+		}
+
+	return stack;
+}
+
 function linkToGithubUsername(rawLink) {
 	// if the link is a link to a GitHub user, return the username in
 	// URI-escaped form. otherwise, return `null`.
@@ -14,8 +31,7 @@ function linkToGithubUsername(rawLink) {
 		return null;
 	}
 
-	// truncate to avoid maliciously excessively long URLs
-	let link = url.parse(rawLink.slice(0, 100));
+	let link = url.parse(rawLink);
 
 	if (!(link.protocol == 'http:' || link.protocol == 'https:')) {
 		// link is not HTTP(S)
@@ -26,22 +42,27 @@ function linkToGithubUsername(rawLink) {
 		return null;
 	}
 
-	// we `.slice(1)` to remove the leading backslash
-	let pathParts = link.pathname.slice(1).split('/');
-	if (pathParts.length != 1) {
+	// we `.slice(1)` to remove the leading backslash.
+	let pathParts = absolute(link.pathname.split('/'));
+
+	if (pathParts.length == 0) {
 		// link has the wrong number of path parts
 		return null;
 	}
 
 	// url.parse automatically performs URI escaping
-	return pathParts[0];
+	if (pathParts[0] === "orgs" && pathParts.length >= 2) { // orgs check
+		return pathParts[1];
+	} else {
+		return pathParts[0];
+	}
 }
 
 function isGithubUsernameReasonable(username) {
 	// collection of sanity checks on github usernames.
 	// returns `true` if passes all sanity checks.
 
-	if (username.length <= 4) {
+	if (username.length <= 2) {
 		// username is too short
 		return false;
 	}
